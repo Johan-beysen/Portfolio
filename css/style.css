@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('../assets/fonts/AnonymousPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url('../fonts/AnonymousPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Anonymous Pro', sans-serif;
+}
+
+.gradient-header {
+    background: linear-gradient(to right, #0a5052 , #32A9AD); 
+}
