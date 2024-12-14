@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio</title>
+  <title>home</title>
 
   <link rel="stylesheet" href="css/reset.css">
   <!-- Bootstrap CSS -->
@@ -18,62 +18,71 @@
   </script>
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Hieronder de links naar .js-->
+<script src="js/dropdown.js" defer></script>
+<script src="js/script.js"> defer</script>
+
 </head>
 
-<body class="bg-black text-white">
-  <header class="container-fluid gradient-header p-1" id="main-header">
-    <div class="row m-2 align-items-center">
-      <figure class="col-auto" id="logo-figure">
-        <img src="assets/images/LogoJB.png" alt="Logo" class="img-fluid">
-      </figure>
-      <section class="col text-center" id="header-text">
-        <h1 class="header-title display-4 fw-bold">Transforming Skills from Sales to Servers</h1>
-        <h2>My journey towards IT</h2>
-      </section>
-    </div>
-    <nav class="navbar navbar-expand-md container-fluid" id="main-nav">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html">home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" aria-current="page" href="portfolio.html">portfolio</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              projecten
-            </a>
-            <ul class="dropdown-menu" id="dropdown1">
-              <li><a class="dropdown-item text-uppercase" href="project1.html">project 1</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project2.html">project 2</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project3.html">project 3</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project4.html">project 4</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project5.html">project 5</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project6.html">project 6</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase active" href="contact.html">contact</a>
-          </li>
-        </ul>
+<body class="d-flex flex-column min-vh-100 bg-black text-white">
+ 
+    <header class="container-fluid gradient-header p-0" id="main-header">
+      <div class="container-fluid d-flex justify-content-between align-items-start pt-3">
+        <div class="d-flex flex-column align-items-start">
+          <figure id="logo-figure" class="m-2 mb-3">
+            <img src="assets/images/logojbportfolio-transp.png" alt="Logo" class="img-fluid">
+          </figure>
+        </div>
+        <div class="d-flex flex-column align-items-center mt-3">
+          <section class="text-center" id="header-text">
+            <h1 class="header-title display-4 fw-bold">Transforming Skills</h1>
+            <h2>from Sales to Servers</h2>
+          </section>
+        </div>
+        <div class="d-flex flex-column align-items-end justify-content-end">
+          <nav class="navbar navbar-expand-md" id="main-nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase text-light"  href="index.html">home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-uppercase text-light" href="skills.html">skills</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-uppercase text-lightactive" aria-current="page" href="portfolio.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">portfolio</a>
+                  <ul class="dropdown-menu bg-dark" id="dropdown1">
+                    <li><a class="dropdown-item text-uppercase text-light" href="project1.html">project 1</a></li>
+                    <li><a class="dropdown-item text-uppercase text-light" href="project2.html">project 2</a></li>
+                    <li><a class="dropdown-item text-uppercase text-light" href="project3.html">project 3</a></li>
+                    <li><a class="dropdown-item text-uppercase text-light" href="project4.html">project 4</a></li>
+                    <li><a class="dropdown-item text-uppercase text-light" href="project5.html">project 5</a></li>
+                    <li><a class="dropdown-item text-uppercase text-light" href="project6.html">project 6</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase text-light" href="contact.html">contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
-    </nav>
-  </header>
+    </header>
 
-  <main class="container p-5" id="main-content">
+    <main class="container p-5 flex-grow-1" id="main-content">
     <div class="row">
       <section class="col-md-10">
         <h2 class="text-center pb-4">Uitgevoerde projecten</h2>
         <div class="row">
           <article class="col-lg-4 col-md-6 col-sm-12 mb-4">
-            <h5>Project 1</h5>
+            <h5>Gestructureerd bekabelen</h5>
             <a href="project1.html">
-              <img src="assets/images/pexels-artunchained-325229.jpg" alt="Project 1" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Hier komt een korte introductie van waarover het project gaat te voorschijn, ongeveer de lengte van deze tekst">
+              <img src="assets/images/structured-cabling.webp" alt="Project 1" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Hier komt een korte introductie van waarover het project gaat te voorschijn, ongeveer de lengte van deze tekst">
             </a>
           </article>
           <article class="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -120,8 +129,8 @@
   </main>
 
   <footer class="gradient-header text-white text-center p-3 mt-5" id="main-footer">
-    <p>&copy; 2024 Johan Beysen. All rights reserved.</p>
-    <a href="disclaimer.html" class="text-white">Disclaimer</a>
+    &copy; <span id="year"></span> Johan Beysen
+    
   </footer>
 
   <script>

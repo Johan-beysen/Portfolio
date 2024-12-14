@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+  <title>home</title>
 
   <link rel="stylesheet" href="css/reset.css">
   <!-- Bootstrap CSS -->
@@ -16,58 +16,76 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
   </script>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/map.css">
+  <!-- Hieronder de links naar .js-->
+<script src="js/dropdown.js" defer></script>
+<script src="js/script.js"> defer</script>
+<script src="js/kaartmortsel.js" defer></script>
 </head>
 
-<body class="bg-black text-white">
-  <header class="container-fluid gradient-header p-1" id="main-header">
-    <div class="row m-2 align-items-center">
-      <figure class="col-auto" id="logo-figure">
-        <img src="assets/images/LogoJB.png" alt="Logo" class="img-fluid">
-      </figure>
-      <section class="col text-center" id="header-text">
-        <h1 class="header-title display-4 fw-bold">Transforming Skills from Sales to Servers</h1>
-        <h2>My journey towards IT</h2>
-      </section>
-    </div>
-    <nav class="navbar navbar-expand-md container-fluid" id="main-nav">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html">home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="portfolio.html">portfolio</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              projecten
-            </a>
-            <ul class="dropdown-menu" id="dropdown1">
-              <li><a class="dropdown-item text-uppercase" href="project1.html">project 1</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project2.html">project 2</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project3.html">project 3</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project4.html">project 4</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project5.html">project 5</a></li>
-              <li><a class="dropdown-item text-uppercase" href="project6.html">project 6</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase active" aria-current="page" href="contact.html">contact</a>
-          </li>
-        </ul>
+<body class="d-flex flex-column min-vh-100 bg-black text-white">
+ 
+  <header class="container-fluid gradient-header p-0" id="main-header">
+    <div class="row pt-3">
+      <div class="col-12 col-md-4 d-flex flex-column align-items-start">
+        <figure id="logo-figure" class="m-2 mb-3">
+          <img src="assets/images/logojbportfolio-transp.png" alt="Logo" class="img-fluid">
+        </figure>
       </div>
-    </nav>
+      <div class="col-12 col-md-4 d-flex flex-column align-items-center mt-3">
+        <section class="text-center" id="header-text">
+          <h1 class="header-title display-4 fw-bold">Transforming Skills</h1>
+          <h2>from Sales to Servers</h2>
+        </section>
+      </div>
+      <div class="col-12 col-md-4 d-flex flex-column align-items-end justify-content-end">
+        <nav class="navbar navbar-expand-md" id="main-nav">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase text-light " href="index.html">home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase text-light" href="skills.html">skills</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-uppercase text-light" href="portfolio.html" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">portfolio</a>
+                <ul class="dropdown-menu bg-dark" id="dropdown1">
+                  <li><a class="dropdown-item text-uppercase text-light" href="project1.html">project 1</a></li>
+                  <li><a class="dropdown-item text-uppercase text-light" href="project2.html">project 2</a></li>
+                  <li><a class="dropdown-item text-uppercase text-light" href="project3.html">project 3</a></li>
+                  <li><a class="dropdown-item text-uppercase text-light" href="project4.html">project 4</a></li>
+                  <li><a class="dropdown-item text-uppercase text-light" href="project5.html">project 5</a></li>
+                  <li><a class="dropdown-item text-uppercase text-light" href="project6.html">project 6</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase text-light active" aria-current="page" href="contact.html">contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main class="container p-5" id="main-content">
+  <main class="container p-5 flex-grow-1" id="main-content">
+    
+    
     <div class="row">
-      <section class="col-md-10">
+      <section class="col-md-5">
         <h2 class="text-center pb-4">Contactformulier</h2>
         <form>
           <div class="mb-3">
@@ -93,20 +111,24 @@
           <button type="submit" class="btn btn-primary">Verzenden</button>
         </form>
       </section>
+      
+      <section class="col-md-5  d-flex align-items-end justify-content-end">
+        <div id="mortsel" class="mb-3"></div>
+      </section>
+      
       <aside class="col-md-2">
         <figure class="pt-3">
           <img src="assets/images/profile-pic (1).png" alt="Profile Picture Johan Beysen" class="img-fluid pt-5">
         </figure>
-        <a href="https://www.linkedin.com/in/johan-beysen" target="_blank" id="linkedin-link" class="d-block text-end">
-          <i class="bi bi-linkedin" style="font-size: 2rem; color: white;"></i>
-        </a>
+                
       </aside>
     </div>
   </main>
 
   <footer class="gradient-header text-white text-center p-3 mt-5" id="main-footer">
-    <p>&copy; 2024 Johan Beysen. All rights reserved.</p>
-    <a href="disclaimer.html" class="text-white">Disclaimer</a>
+    &copy; <span id="year"></span> Johan Beysen
+    <a href="https://www.linkedin.com/in/johan-beysen-252b10153/" target="_blank" id="linkedin-link"class="d-block text-end">
+      <i class="bi bi-linkedin" style="font-size: 2rem; color: white;"></i>
   </footer>
 </body>
 

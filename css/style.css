@@ -1,21 +1,48 @@
 @font-face {
-    font-family: 'Anonymous Pro';
-    src: url('../assets/fonts/AnonymousPro-Regular.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Anonymous Pro';
-    src: url('../fonts/AnonymousPro-Bold.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 body {
-    font-family: 'Anonymous Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .gradient-header {
     background: linear-gradient(to right, #0a5052 , #32A9AD); 
 }
+
+.nav-link {
+    font-size: 1.0rem; 
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+  }
+
+  #logo-figure img {
+    width: 160; 
+    height: auto;
+  }
+
+  #html, body {
+    height: 100%;
+  }
+  
+  #main-footer {
+    margin-top: auto;
+  }
+
+  .nav-link.active {
+    font-weight: bold;
+    
+  }
