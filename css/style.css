@@ -46,3 +46,9 @@ body {
     font-weight: bold;
     
   }
+
+  figcaption {
+    font-size: 0.75rem; 
+    color: #6c757d; 
+     
+}
