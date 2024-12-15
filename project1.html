@@ -17,6 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
   </script>
+  
   <!-- eigen geschreven css voor jouw html-bestand -->
   <link rel="stylesheet" href="css/style.css">
   <!-- Hieronder de links naar .js-->
@@ -120,7 +121,7 @@
         </div>
         <div class="row">
           <section class="col-md-6">
-            <h5>Bekabelingsplan</h5>
+            <h5 class="text-center">Bekabelingsplan</h5>
             <div id="carouselBekabelingsplan" class="carousel carousel-dark slide">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselBekabelingsplan" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -129,24 +130,24 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="assets/images/plattegrond.png" class="d-block w-100" alt="..." data-bs-toggle="modal"
-                    data-bs-target="#imageModal" onclick="showImage('assets/images/plattegrond.png')">
+                  <img src="assets/images/plattegrond.png" class="d-block w-100" alt="plattegrond" data-bs-toggle="modal"
+                    data-bs-target="#imageModal" onclick="showImage('assets/images/plattegrondlarge.png')">
                   <div class="carousel-caption d-none d-md-block">
-                    <h3>Floorplan</h3>
+                    <h5>Floorplan</h5>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/images/Serverrack.png" class="d-block w-100" alt="..." data-bs-toggle="modal"
-                    data-bs-target="#imageModal" onclick="showImage('assets/images/Serverrack.png')">
+                  <img src="assets/images/Serverrack.png" class="d-block w-100" alt="serverrack" data-bs-toggle="modal"
+                    data-bs-target="#imageModal" onclick="showImage('assets/images/Serverracklarge.png')">
                   <div class="carousel-caption d-none d-md-block">
-                    <h3>Het Server-Rack</h3>
+                    <h5>Het Server-Rack</h5>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/images/UnmanagedSR.png" class="d-block w-100" alt="..." data-bs-toggle="modal"
-                    data-bs-target="#imageModal" onclick="showImage('assets/images/UnmanagedSR.png')">
+                  <img src="assets/images/UnmanagedSR.png" class="d-block w-100" alt="serverrack" data-bs-toggle="modal"
+                    data-bs-target="#imageModal" onclick="showImage('assets/images/UnmanagedSRLarge.png')">
                   <div class="carousel-caption d-none d-md-block">
-                    <h3>Het Server-Rack Met bekabeling</h3>
+                    <h5>Het Server-Rack Met bekabeling</h5>
                   </div>
                 </div>
               </div>
@@ -161,7 +162,7 @@
             </div>
           </section>
           <section class="col-md-6">
-            <h5>Het patchplan en Rack-Layout</h5>
+            <h5 class="text-center">Het patchplan en Rack-Layout</h5>
             <div id="carouselRacknpatch" class="carousel carousel-dark slide">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselRacknpatch" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -170,24 +171,25 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                  <img src="assets/images/patchplansm.png" class="d-block w-100" alt="..." data-bs-toggle="modal"
+                  <img src="assets/images/patchplansm.png" class="d-block w-100" alt="patchplan" data-bs-toggle="modal"
                     data-bs-target="#imageModal" onclick="showImage('assets/images/patchpllong.png')">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Patch Plan</h5>
                   </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                  <img src="assets/images/racksmall.png" class="d-block w-100" alt="Rack-Layout">
+                  <img src="assets/images/racksmall.png" class="d-block w-100" alt="Rack-Layout"data-bs-toggle="modal"
+                    data-bs-target="#imageModal" onclick="showImage('assets/images/racklarge.png')">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Rack-Layout</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/images/aankooplijstsmall.png" class="d-block w-100" alt="...">
+                  <img src="assets/images/aankooplijstsmall.png" class="d-block w-100" alt="aankooplijst"data-bs-toggle="modal"
+                  data-bs-target="#imageModal" onclick="showImage('assets/images/aankooplijstsmall.png')">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Aankooplijst</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    
                   </div>
                 </div>
               </div>
@@ -201,6 +203,19 @@
               </button>
             </div>
           </section>
+        </div>
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img id="modalImage" src="" class="img-fluid" alt="Modal Image">
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <aside class="col-md-2">
@@ -260,5 +275,6 @@
     <a href="https://www.linkedin.com/in/johan-beysen-252b10153/" target="_blank" id="linkedin-link" class="d-block text-end">
       <i class="bi bi-linkedin" style="font-size: 2rem; color: white;"></i>
   </footer>
+  
 </body>
 </html>

@@ -52,3 +52,12 @@ body {
     color: #6c757d; 
      
 }
+.carousel {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}

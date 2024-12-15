@@ -1,3 +1,6 @@
 function showImage(src) {
-    document.getElementById('modalImage').src = src;
+  const modalImage = document.getElementById('modalImage');
+  if (modalImage) {
+    modalImage.src = src;
   }
+}
