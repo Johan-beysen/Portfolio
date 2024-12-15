@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const apiKey = '4e8e2bb0ca58181988d2bd01b1783962';
+    const apiKey = 'e5df7343122ed9fa2f8244381608554c';
     const apiUrl = `https://api.ipstack.com/check?access_key=${apiKey}`;
   
     fetch(apiUrl)
@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
           locationInfo.innerHTML = `
             <p>IP: ${data.ip}</p>
             <p>Land: ${data.country_name}</p>
-            <p>Regio: ${data.region_name}</p>
             <p>Stad: ${data.city}</p>
+            <p>Provider: ${data.connection.isp}</p>
           `;
         } else {
           console.error('Element with id "location-info" not found.');

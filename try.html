@@ -4,16 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills</title>
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/images/logojbportfoliofavicon.png" type="image/x-icon">
+  <title>Gestructureerd bekabelen</title>
+
+  <link rel="stylesheet" href="css/reset.css">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Eigen CSS -->
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
+  </script>
+  <!-- Eigen JavaScript -->
+  <script src="js/dropdown.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/carousel.js" defer></script>
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-black text-white">
@@ -42,13 +51,13 @@
                 <a class="nav-link text-uppercase text-light" href="index.html">home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-uppercase text-light" aria-current="page" href="skills.html">skills</a>
+                <a class="nav-link text-uppercase text-light" href="skills.html">skills</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-uppercase text-light" href="portfolio.html" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">portfolio</a>
                 <ul class="dropdown-menu bg-dark" id="dropdown1">
-                  <li><a class="dropdown-item text-uppercase text-light" href="project1.html">project 1</a></li>
+                  <li><a class="dropdown-item text-uppercase text-light active" aria-current="page" href="project1.html">project 1</a></li>
                   <li><a class="dropdown-item text-uppercase text-light" href="project2.html">project 2</a></li>
                   <li><a class="dropdown-item text-uppercase text-light" href="project3.html">project 3</a></li>
                   <li><a class="dropdown-item text-uppercase text-light" href="project4.html">project 4</a></li>
@@ -66,19 +75,130 @@
     </div>
   </header>
 
-  <main class="container p-5 flex-grow-1" id="main-content">
+  <main class="container-fluid p-5 flex-grow-1" id="main-content">
     <div class="row">
-      <section class="col-md-10" id="about-section">
-        <h2 class="text-center pb-4">Wie Is Johan Beysen?</h2>
+      <section class="col-md-10">
+        <div class="container mt-5">
+          <h1 class="text-center mb-4">Gestructureerd bekabelen</h1>
+          <h5 class="text-center mb-4">De Missie</h5>
+          <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th>Apparatuur</th>
+                <th>Aantal</th>
+                <th>Taak</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PC's</td>
+                <td>25</td>
+                <td>Bekabelingplan maken in Cisco Packet Tracer</td>
+              </tr>
+              <tr>
+                <td>IP-telefoons</td>
+                <td>25</td>
+                <td>Bekabelingplan maken in Cisco Packet Tracer</td>
+              </tr>
+              <tr>
+                <td>MFP's (Multifunctionele printers)</td>
+                <td>6</td>
+                <td>Patchplan maken in Excel</td>
+              </tr>
+              <tr>
+                <td>Bekabeling</td>
+                <td>-</td>
+                <td>Rack layout maken in Excel</td>
+              </tr>
+              <tr>
+                <td colspan="3">Gelukkig mochten we er van uitgaan dat Gyprocwanden nog moesten geplaatst worden, net zoals een verhoogde vloer. Dit was uiteraard slechts een simulatie, het fysiek bekabelen kwam niet aan de orde.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="row">
-          <article class="col-md-6">
-            <h3>Hard Skills</h3>
-            <p>Hier komt een leuke visualisatie van groeiende hard skills gekoppeld aan de opleiding.</p>
-          </article>
-          <article class="col-md-6">
-            <h3>Soft Skills</h3>
-            <p>Hier komt een nog leukere visualisatie van soft skills. Ik denk nu aan een sterstructuur met daar vertakkingen aan - in elke tak een soft skill of een categorie en dan met popups meer uitleg over de skill.</p>
-          </article>
+          <section class="col-md-5">
+            <h5>Bekabelingsplan</h5>
+            <div id="carouselBekabelingsplan" class="carousel carousel-dark slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselBekabelingsplan" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselBekabelingsplan" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselBekabelingsplan" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/images/plattegrond.png" class="d-block w-100" alt="..." data-bs-toggle="modal"
+                    data-bs-target="#imageModal" onclick="showImage('assets/images/plattegrond.png')">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Floorplan</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/Serverrack.png" class="d-block w-100" alt="..." data-bs-toggle="modal"
+                    data-bs-target="#imageModal" onclick="showImage('assets/images/Serverrack.png')">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Het Server-Rack</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/UnmanagedSR.png" class="d-block w-100" alt="..." data-bs-toggle="modal"
+                    data-bs-target="#imageModal" onclick="showImage('assets/images/UnmanagedSR.png')">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Het Server-Rack Met bekabeling</h3>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselBekabelingsplan" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselBekabelingsplan" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+          <section class="col-md-5">
+            <h5>Het patchplan en Rack-Layout</h5>
+            <div id="carouselRacknpatch" class="carousel carousel-dark slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselRacknpatch" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselRacknpatch" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselRacknpatch" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="assets/images/patchplansm.png" class="d-block w-100" alt="..." data-bs-toggle="modal"
+                    data-bs-target="#imageModal" onclick="showImage('assets/images/patchpllong.png')">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Patch Plan</h5>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="assets/images/racksmall.png" class="d-block w-100" alt="Rack-Layout">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Rack-Layout</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/aankooplijstsmall.png" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Aankooplijst</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselRacknpatch" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselRacknpatch" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
         </div>
       </section>
       <aside class="col-md-2">
@@ -88,9 +208,9 @@
             <h7>Datacom & Netwerken</h7>
             <figure>
               <a href="project1.html">
-                <img src="assets/images/structured-cabling.webp" alt="Project 1" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Bekijk hier de projecten die we hebben mogen verwezenelijken met betrekking tot Datacom & Netwerken">
+                <img src="assets/images/structured-cabling.webp" alt="Project 1" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Bekijk hier de projecten die we hebben mogen verwezenlijken met betrekking tot Datacom & Netwerken">
               </a>
-              <figcaption>Bron: Dall.E</figcaption>
+              <figcaption>&copy; dall.e</figcaption>
             </figure>
           </article>
           <article class="col-12 mb-2">
@@ -99,7 +219,7 @@
               <a href="project2.html">
                 <img src="assets/images/tuxstudent.webp" alt="Besturingssytemen" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Je kan je niet verdiepen in Besturingssystemen zonder de wondere wereld van Linux te bewandelen. Persoonlijk was de keuze voor Linux al gemaakt toen ik over de reële betkenis van Open Source begon te lezen. ">
               </a>
-              <figcaption>Bron: Dall.E</figcaption>
+              <figcaption>&copy; dall.e</figcaption>
             </figure>
           </article>
           <article class="col-12 mb-2">
@@ -108,7 +228,7 @@
               <a href="project3.html">
                 <img src="assets/images/codingpython.webp" alt="Project 3" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Hier komt een korte introductie van waarover het project gaat te voorschijn, ongeveer de lengte van deze tekst">
               </a>
-              <figcaption>Bron: Dall.E</figcaption>
+              <figcaption>&copy; dall.e</figcaption>
             </figure>
           </article>
           <article class="col-12 mb-4">
@@ -117,7 +237,7 @@
               <a href="project4.html">
                 <img src="assets/images/cyberfort.png" alt="Project 4" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Hier komt een korte introductie van waarover het project gaat te voorschijn, ongeveer de lengte van deze tekst">
               </a>
-              <figcaption>Bron: Dall.E</figcaption>
+              <figcaption>&copy; dall.e</figcaption>
             </figure>
           </article>
           <article class="col-12 mb-4">
@@ -126,22 +246,18 @@
               <a href="project5.html">
                 <img src="assets/images/stageplekgezocht.png" alt="Project 5" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="top" title="Hier komt een korte introductie van waarover het project gaat te voorschijn, ongeveer de lengte van deze tekst">
               </a>
-              <figcaption>Bron: Dall.E</figcaption>
+              <figcaption>&copy; dall.e</figcaption>
             </figure>
           </article>
         </div>
       </aside>
     </div>
   </main>
-
   <footer class="gradient-header text-white text-center p-3 mt-5" id="main-footer">
     &copy; <span id="year"></span> Johan Beysen
+    <a href="https://www.linkedin.com/in/johan-beysen-252b10153/" target="_blank" id="linkedin-link" class="d-block text-end">
+      <i class="bi bi-linkedin" style="font-size: 2rem; color: white;"></i>
   </footer>
-
- 
 </body>
 
 </html>
-
-
-<figcaption class="h6 small mt-2">&copy; dall.e</figcaption>
