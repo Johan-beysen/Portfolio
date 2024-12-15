@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
           locationInfo.innerHTML = `
             <p>IP: ${data.ip}</p>
             <p>Land: ${data.country_name}</p>
+            <p>Regio: ${data.region_name}</p>
             <p>Stad: ${data.city}</p>
-            <p>Provider: ${data.connection.isp}</p>
+            
           `;
         } else {
           console.error('Element with id "location-info" not found.');
