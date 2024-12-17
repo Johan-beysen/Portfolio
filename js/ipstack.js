@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const apiKey = '0e6a47282f275a335bd55c175b4b8fc8';
+    const apiKey = 'e5df7343122ed9fa2f8244381608554c';
     const apiUrl = `https://api.ipstack.com/check?access_key=${apiKey}`;
   
     fetch(apiUrl)
